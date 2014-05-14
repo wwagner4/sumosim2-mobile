@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>sumosim</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<!-- Style for 'layout02' -->
+<style type="text/css">
+body {
+	font-family: sans-serif;
+	font-size: x-small;
+}
+
+#left,#right {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 100%;
+	background-color: #007700;
+}
+
+#right {
+	left: auto;
+	right: 0;
+	width: 200px;
+	background-color: #00AA00;
+}
+
+#middle {
+	position: fixed;
+	top: 0;
+	left: 200px; /*Set left value to WidthOfLeftFrameDiv*/
+	right: 200px; /*Set right value to WidthOfRightFrameDiv*/
+	bottom: 0;
+	background-color: #00FF00;
+}
+</style>
+<script type="text/javascript">
+	// Set the size of the canvas to the size of the enclosing tag 
+	$(document).ready(function() {
+		var middle = document.getElementById("middle");
+		var canvas = document.getElementById("canvas");
+		canvas.width = middle.offsetWidth;
+		canvas.height = middle.offsetWidth;
+	});
+</script>
+</head>
+<body>
+
+
+	<div id="left">
+		<div id="f"
+			style="width: 200px; height: 100px; background-color: yellow">
+			forward</div>
+		<div id="b"
+			style="width: 200px; height: 100px; background-color: red;">
+			backwards</div>
+	</div>
+	<div id="middle">
+		<canvas id="canvas" width="700" height="500" style="float: left">Canvas tag not supported</canvas>
+	</div>
+	<div id="right">
+		<div id="tl"
+			style="width: 100px; height: 200px; background-color: yellow; float: left;">
+			turn left</div>
+		<div id="tr"
+			style="width: 100px; height: 200px; background-color: red; float: left;">
+			turn right</div>
+	</div>
+
+	<script type="text/javascript"
+		src="target/scala-2.10/sumosim-scalajs-extdeps.js"></script>
+	<script type="text/javascript"
+		src="target/scala-2.10/sumosim-scalajs-intdeps.js"></script>
+	<script type="text/javascript"
+		src="target/scala-2.10/sumosim-scalajs.js"></script>
+	<!--
+<script type="text/javascript" src="js/sumosim-scalajs-opt.js"></script>
+-->
+
+</body>
+</html>

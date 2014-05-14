@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "net.entelijan.sumosim2"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <preference name="orientation" value="landscape" />
+    <name>sumosim</name>
+
+    <description>A sumorobot game</description>
+
+    <author href="http://entelijan.net" email="wwagner4@gmail.com">Wolfgang Wagner</author>
+	
+	<gap:platform name="android" />
+	
+	<preference name="phonegap-version" value="3.3.0" />
+
+	<preference name="permissions" value="none"/>
+	
+	<icon src="icons/icon.png" />
+
+	<icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+	<icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+	<icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+	<icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />	
+	
+</widget>
